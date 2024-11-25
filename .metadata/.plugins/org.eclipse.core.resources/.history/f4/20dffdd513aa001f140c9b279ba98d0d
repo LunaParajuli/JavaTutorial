@@ -1,0 +1,11 @@
+package ObjectOriented;
+
+public class MainClass {
+ public static void main(String args[]) {
+	 //Here we create a new object called alex.
+	 Students alex = new Students();
+	 alex.assign();
+	 alex.display();
+	
+ }
+}

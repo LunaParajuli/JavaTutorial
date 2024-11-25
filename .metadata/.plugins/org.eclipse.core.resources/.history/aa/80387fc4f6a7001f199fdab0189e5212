@@ -1,0 +1,9 @@
+//Write a program to add the digits of a number.
+
+package WhileLoop;
+
+public class WhileLoop4 {
+  public static void main(String args[]) {
+	  
+  }
+}

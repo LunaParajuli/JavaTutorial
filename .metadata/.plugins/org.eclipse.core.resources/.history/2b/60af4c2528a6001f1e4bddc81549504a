@@ -1,0 +1,14 @@
+package Project2;
+
+public class AnotherifCase {
+	public static void main(String args[]) {
+		String weather = "It's raining";
+		if(weather.equals("It's raining"){
+		
+		}
+		else("It's sunny")
+			
+				
+	}
+
+}

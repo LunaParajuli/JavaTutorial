@@ -1,0 +1,21 @@
+package ObjectOriented;
+
+public class MainClass {
+ public static void main(String args[]) {
+	 //Here we create a new object called alex.
+//	 Students student = new Students();
+//	 student.assign(101,"John","Engineering");
+//	 student.display();
+//	 
+//	 
+//	 student.assign(90, 80, 70);
+//	 student.calculate();
+//	 
+
+	 
+	 Students std1 = new Students();
+	 Students std2 = new Students(101,"John","Engineering");
+	 std2.display();
+	
+ }
+}

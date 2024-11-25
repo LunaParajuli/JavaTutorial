@@ -1,0 +1,12 @@
+//Write a program to find factorial of a number.
+
+package DoWhile;
+
+public class DoWhile2 {
+	public static void main(String args[]) {
+	    do {
+	    	
+	    }
+  
+}
+}

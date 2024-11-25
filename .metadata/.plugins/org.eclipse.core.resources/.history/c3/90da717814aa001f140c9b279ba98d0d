@@ -1,0 +1,29 @@
+package ObjectOriented;
+
+public class Students {
+
+	int reg_no;
+	String studentName;
+	String stream;
+	
+//	public void assign() {
+//		reg_no=101;
+//		studentName ="Alex";
+//	    stream="Science and Technology";
+//	}
+	
+	public void assign(int reg_no, String studentName, String stream) {
+		this.reg_no = reg_no;
+		this.studentName = studentName;
+		this.stream = stream;
+	}
+	
+	
+	public void display() {
+		System.out.println("Reg No is : "+reg_no);
+		System.out.println("Name is: "+studentName);
+		System.out.println("Stream is : "+stream);
+	}
+	
+	
+}

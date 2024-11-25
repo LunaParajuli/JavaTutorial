@@ -1,0 +1,19 @@
+package StudentObject;
+
+public class StudentDetail {
+	
+	public static void main(String args[]) {
+		
+		Std s = new Std();
+		
+		s.assign(100,"Joe","CSIT","Jamal");
+		s.assign("CSIT","Fourth Year",8);
+		s.assign(20,60,"Brown");
+		
+		s.display();
+		s.displays();
+		s.displayss();
+		
+	}
+
+}

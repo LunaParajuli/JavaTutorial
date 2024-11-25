@@ -1,0 +1,16 @@
+//Write a program to print 10 even numbers and 10 odd numbers.
+
+package ForLoop;
+
+import java.util.*;
+
+public class Loop1 {
+	public static void main(String args[]) {
+		int i;
+			 
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+package ForLoop;
+
+import java.util.*;
+
+public class Loop5fibonacci {
+public static void main(String args[]) {
+	
+}
+}

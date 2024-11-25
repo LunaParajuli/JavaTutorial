@@ -1,0 +1,22 @@
+package StudentObject;
+
+public class StudentDetail {
+	
+	public static void main(String args[]) {
+		
+		StudentInfo s1 = new StudentInfo();
+		s1.assign(100,"Joe","Jamal");
+		s1.display();
+		
+		
+		AcademicInfo s2 = new AcademicInfo();
+		s2.assign("CSIT","Fourth Year",8);
+		s2.display();
+		
+		PhysicalInfo s3 = new PhysicalInfo();
+		s.assign(20,60,"Brown");
+		s.display()
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+//Write a program to check if the candidate is eligible for voting or not. (Hint: Check age)
+  
+package IfElse;
+
+public class IfCondition1 {
+public static void main(String args[]) {
+	 
+}
+}

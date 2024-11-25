@@ -1,0 +1,11 @@
+//Write a program to find factorial of a number.
+
+package WhileLoop;
+
+import java.util.*;
+
+public class WhileLoop2 {
+public static void main(String args[]) {
+
+}
+}

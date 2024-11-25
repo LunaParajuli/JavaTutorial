@@ -1,0 +1,21 @@
+//Write a program to find largest of two numbers.
+ 
+package IfElse;
+
+import java.util.*;
+
+public class IfCondition3 {
+public static void main(String args[]) {
+	int num , a , b;
+	Scanner sc = new Scanner(System.in);
+	
+   a = sc.nextInt();
+   System.out.println("Enter the first number: "+a);
+	
+   b= sc.nextInt();
+   System.out.println("Enter the second number:"+b);
+	
+   
+   
+}
+}

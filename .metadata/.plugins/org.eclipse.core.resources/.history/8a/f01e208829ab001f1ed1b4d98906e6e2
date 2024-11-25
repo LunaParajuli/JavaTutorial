@@ -1,0 +1,9 @@
+//Write a program to reverse the digits of a number.
+
+package DoWhile;
+
+import java.util.*;
+
+public class DoWhile5 {
+
+}

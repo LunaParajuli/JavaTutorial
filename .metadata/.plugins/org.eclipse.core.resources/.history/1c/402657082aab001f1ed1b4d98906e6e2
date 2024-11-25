@@ -1,0 +1,27 @@
+// Write a program to generate 10 Fibonacci numbers
+
+package DoWhile;
+
+public class DoWhile6 {
+	
+	public static void main(String args[]) {
+		
+		 int count = 1; 
+	        int a = 0;    
+	        int b = 1;
+
+	        System.out.println("The first 10 Fibonacci numbers are:");
+	        System.out.print(a + " " + b); // Print the first two Fibonacci numbers
+
+	        // Process: Generate Fibonacci numbers using a do-while loop
+	        do {
+	            int next = a + b; // Calculate the next Fibonacci number
+	            System.out.print(" " + next); // Print the next number
+	            a = b;          // Update `a` to the previous `b`
+	            b = next;       // Update `b` to the next number
+	            count++;        // Increment the counter
+	        } while (count < 9); // Generate until 10 numbers are printed (2 already printed)
+		
+	}
+
+}

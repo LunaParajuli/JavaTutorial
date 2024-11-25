@@ -1,0 +1,14 @@
+//Write programs to use all the data types and given arithmetic operations
+
+
+package Datatypes;
+
+java.util.*;
+
+public class Datatype1 {
+  public static void main(String args[]) {
+	  int a;
+	  Scanner sc = new Scanner(System.in);
+	  
+  }
+}
