@@ -1,13 +1,13 @@
 package StudentObject;
 
-public class AcademicInfo extends PhysicalInfo {
+public class AcademicInfo  {
 
 	String stream;
 	String level;
 	int semester;
 	
 	
-	public AcademicInfo(String stream, String level, int semester) {
+	public void assign(String stream, String level, int semester) {
 		this.stream = stream;
 		this.level = level;
 		this.semester = semester;

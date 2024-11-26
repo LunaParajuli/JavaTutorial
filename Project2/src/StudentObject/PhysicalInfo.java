@@ -7,11 +7,10 @@ public class PhysicalInfo {
 	String skin_type;
 	
 	
-	public PhysicalInfo(int height, int weight, String skin_type) {
+	public void assign(int height, int weight, String skin_type) {
 		this.height = height;
 		this.weight = weight;
-		this.skin_type = skin_type;
-		
+		this.skin_type = skin_type;	
 	}
 	
 	public void display() {

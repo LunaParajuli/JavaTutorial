@@ -1,13 +1,13 @@
 package StudentObject;
 
-public class StudentInfo extends PhysicalInfo  {
+public class StudentInfo   {
  
 	int reg_no;
 	String studentName;
 	String address;
 
 
-public StudentInfo(int reg_no, String studentName, String address) {
+public void assign(int reg_no, String studentName, String address) {
 	this.reg_no = reg_no;
 	this.studentName = studentName;
 	this.address = address;
