@@ -1,11 +1,12 @@
 package OOriented;
 
 
- class SBAccount extends Account {
+ final class SBAccount extends Account {
 	 
-	final double interest_rate = 0.04;
+	private static final double interest_rate = 0.04;
 
-	final double min_balance_SB = 1000;
+    private static final double min_balance_SB = 1000;
+	
 	
 	
     

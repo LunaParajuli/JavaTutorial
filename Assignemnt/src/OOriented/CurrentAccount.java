@@ -30,8 +30,6 @@ public class CurrentAccount extends Account {
 			 }
 			 else {
 				 System.out.println("Not enough balance to be withdrawn...... ");
-			 }
-			 
-		 }
-		 	
+			 } 
+		 }		 	
 }
