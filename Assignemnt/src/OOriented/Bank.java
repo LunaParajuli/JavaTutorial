@@ -31,14 +31,14 @@ public class Bank {
                     System.out.println("Initial balance must be at least " + Account.min_balance_SB + " for a Savings Account.");
                     return;
                 }
-                account = new SBAccount(accountNumber, name, initialBalance);
+                account = new SBAccount(account_number, account_name, initialBalance);
                 break;
             case 2:
                 if (initialBalance < Account.min_balance_CA) {
                     System.out.println("Initial balance must be at least " + Account.min_balance_CA + " for a Current Account.");
                     return;
                 }
-                account = new CurrentAccount(accountNumber, name, initialBalance);
+                account = new CurrentAccount(account_number, account_name, initialBalance);
                 break;
             default:
                 System.out.println("Invalid choice.");

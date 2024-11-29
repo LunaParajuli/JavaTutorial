@@ -1,9 +1,15 @@
 package Inheritance;
 
-public class StudentInheritance {
+import java.io.*;
+
+public class StudentInheritance  {
 	
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
+		
+		
 		StudentInheritance std = new StudentInheritance();
+		
+		
 		
 	}
 	

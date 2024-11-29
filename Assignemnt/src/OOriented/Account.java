@@ -3,14 +3,19 @@ package OOriented;
 
 abstract class Account {
     
-	int account_number;
-	String account_name;
-	double balance_amount;
+	protected int account_number;
+	protected String account_name;
+	protected double balance_amount;
 	
 	double deposit;
 	double withdraw;
 
 	double total_balance;
+	
+	
+	public abstract void deposit(double amount);
+    public abstract void withdraw(double amount);
+	
 	
 	public Account(int account_number, String account_name, double balance_amount,double withdraw,double deposit, double total_balance ){
 		 this.account_number = account_number;

@@ -15,7 +15,8 @@ package OOriented;
 	 }
 	 
 	 //amount deposit
-	 public void depositAmount() {
+	 @Override
+	 public void depositAmount(double amount) {
 	  
 		 if(deposit>100) {
 			 double new_balance= deposit+total_balance;
