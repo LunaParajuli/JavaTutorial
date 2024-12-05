@@ -1,9 +1,0 @@
-//Write a program to generate tables of 10.
-
-package DoWhile;
-
-public class DoWhile3 {
- public static void main(String args[]) {
-	 
- }
-}

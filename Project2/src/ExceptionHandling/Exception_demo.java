@@ -2,7 +2,6 @@ package ExceptionHandling;
 
 import java.io.*;
 
-
 public class Exception_demo {
 	
 	public static void main(String args[]) {
@@ -23,8 +22,7 @@ public class Exception_demo {
 			c=a/b;
 			
 			System.out.println("The Result is: "+c);
-			
-			
+				
 		}
 		
 		catch(ArithmeticException ex) {
@@ -47,14 +45,15 @@ public class Exception_demo {
 
 
 /* 
+ 
  Exception Handling:  Handling abnormal Error
  
  Error:
  1.Syntax Error
  2.Logical Error
- 3.Run Time Error
+ 3.Run Time Error 
  
- Exception:Run Time Errror
+ Exception:Run Time Error
  
  Types:
  1.Using try...catch...finally
@@ -66,16 +65,13 @@ public class Exception_demo {
  3.using throw
    user defined exception(Custom Exception)
    
-  
       
  Types of Exceptions:
  a). Arithmetic Exception
  b). IOException
  c). NumberFormatException
  d). ArrayIndexOutOfBoundException
- e).  SQLException
- f). RemoteExceotion
- 
-      
+ e). SQLException
+ f). RemoteException
   
  */
