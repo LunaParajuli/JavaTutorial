@@ -2,10 +2,6 @@ package ThreadExample;
 
 public class Threads extends Thread {
 	
-	 Threads(){
-		start();
-	}
-	 
 	 
 	 public void run() {
 		
@@ -24,11 +20,15 @@ public class Threads extends Thread {
 	
 	public static void main(String args[]) {
 		
-		new Threads();
+		NewThread nt = new NewThread();
+		Thread t1= new Thread(nt);
+		t1.start();
+		Thread t2= new Thread(nt);
+		t2.start();
 		
 			try {
 				
-				Thread.sleep(3000);
+				Thread.sleep(1000);
 				
 				int i;
 				 for(i=10;i>=1;i--) {
