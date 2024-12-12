@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class AplicationForm  extends JFrame implements ActionListener{
 	
-	JLabel roll, name,gender,hobbie;
+	JLabel roll, name,gender,hobby;
 	JTextField  txtroll, txtname;
 	
 	JComboBox cbgender;
@@ -19,7 +19,7 @@ public class AplicationForm  extends JFrame implements ActionListener{
 		roll = new JLabel("Roll No: ");
 		name = new JLabel("Full Name: ");
 		gender = new JLabel("Gender:");
-		hobbie = new JLabel("Hobby:");
+		hobby = new JLabel("Hobby:");
 		
 		txtroll = new JTextField(20);
 		txtname = new JTextField(20);
@@ -52,8 +52,8 @@ public class AplicationForm  extends JFrame implements ActionListener{
 		add(cbgender);
 		cbgender.setBounds(100,90,200,25);
 		
-		add(hobbie);
-		hobbie.setBounds(30,130,80,25);
+		add(hobby);
+		hobby.setBounds(30,130,80,25);
 		add(hobby1);
 		hobby1.setBounds(100,130,80,25);
 		add(hobby2);
@@ -78,12 +78,24 @@ public class AplicationForm  extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 	
 		if(e.getSource()==submt) {
+			
+			 StringBuilder selectedHobbies = new StringBuilder("");
+	            if (hobby1.isSelected()) {
+	                selectedHobbies.append("Reading ");
+	            }
+	            if (hobby2.isSelected()) {
+	                selectedHobbies.append("Writing ");
+	            }
+	            if (hobby3.isSelected()) {
+	                selectedHobbies.append("Coding ");
+	            }
+			
 			new NextForm(
 					txtroll.getText(), 
 					txtname.getText(), 
-					cbgender.getSelectedItem().toString()
-			             );
-            
+					cbgender.getSelectedItem().toString(),
+					selectedHobbies.toString().trim()
+			             ); 
 		}
 	}
 }
