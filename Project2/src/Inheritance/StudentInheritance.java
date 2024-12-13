@@ -51,7 +51,6 @@ public class StudentInheritance  {
 		System.out.print("Enter the Skin_Type:");
 		skin_type=br.readLine();
 		
-		
 		StudentDetail stds = new StudentDetail();
 		
 		stds.assignStudentInfo(reg_no,studentName,address);
@@ -59,12 +58,8 @@ public class StudentInheritance  {
 		stds.assignPhysicalInfo(height,weight,skin_type);
 		
 		
-		stds.displayStudentDetail();
-		
-		
-	}
-	
-	
+		stds.displayStudentDetail();	
+	}	
 }
 
 class StudentInfo{

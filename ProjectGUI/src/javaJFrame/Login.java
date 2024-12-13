@@ -9,7 +9,7 @@ public class Login extends JFrame implements ActionListener{
 	JLabel lbluser,lblpass;
 	JTextField txtuser;
 	JPasswordField txtpass;
-	JButton btnlogin,btnreset;
+	JButton btnlogin,btnreset, newuser;
 	
 	public Login() {
 		lbluser=new JLabel("User Name");
@@ -20,6 +20,7 @@ public class Login extends JFrame implements ActionListener{
 		
 		btnlogin=new JButton("Login");
 		btnreset=new JButton("Reset");
+		newuser=new JButton("New User? Sign up");
 		
 		//setLayout(new FlowLayout());
 		setLayout(null);
@@ -41,6 +42,11 @@ public class Login extends JFrame implements ActionListener{
 		add(btnreset);
 		btnreset.setBounds(230,100,100,25);
 		btnreset.addActionListener(this);
+		
+		add(newuser);
+		newuser.setBounds(130,150,200,25);
+		newuser.addActionListener(this);
+		
 		
 		setVisible(true);
 		setSize(400,250);
@@ -74,6 +80,11 @@ public class Login extends JFrame implements ActionListener{
 			
 			txtuser.setText("");
 			txtpass.setText("");
+		}
+		
+		if(e.getSource()==newuser) {
+			new NewUserForm();
+			this.dispose();
 		}
 		
 	}
