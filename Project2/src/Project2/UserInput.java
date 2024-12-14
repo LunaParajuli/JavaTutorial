@@ -11,7 +11,6 @@ public class UserInput  {
 		
 		//BufferedReader br = new  BufferedReader(new InputStreamReader(System.in));
 		
-		
 		String name;
 		int age;
 		char gender;
