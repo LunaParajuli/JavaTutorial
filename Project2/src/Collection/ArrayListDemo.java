@@ -9,22 +9,17 @@ public class ArrayListDemo {
 		std.add(new Student("Roman",22));
 		std.add(new Student("Peter",23));
 		
-		
 		for(Student std1:std) {
 			System.out.println(std1.name);
 			System.out.println(std1.age);
-		}
-		
+		}	
 	}
-
 }
-
 
 class Student{
 	String name;
 	int age;
-	
-	
+
 	public Student(String name, int age) {
 		this.name =name;
 		this.age = age;
