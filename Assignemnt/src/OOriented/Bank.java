@@ -1,3 +1,25 @@
+/*
+ 
+1. Write classes to hold Account, SB-Account and Current-Account details. [Here implement 
+the concept of inheritance.]  
+The common properties of the account are Account number, name and amount.  
+Specifics of SB account is 4% interest to be paid per month.  
+=> Implement the run-time polymorphism by creating base class variable and derived class 
+object.    
+=> Ask the user for which type of account to be created then create the corresponding 
+account (Note: Use scanner class).  
+=> Implement function overriding by having deposit and withdraw functions and perform the 
+required action accordingly.  
+Ensure base class can’t be instantiated. (Note: Abstract keyword can be used).  
+
+2. Define the minimum balance for the both the type of accounts. Use final keyword to 
+create constants.    
+Ensure sb account class and current account class will cannot be used as base classes (Note: 
+You can use final classes). 
+
+*/
+
+
 package OOriented;
 
 import java.util.*;

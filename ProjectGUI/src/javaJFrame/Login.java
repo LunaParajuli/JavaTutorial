@@ -3,6 +3,7 @@ package javaJFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.*;
 
 public class Login extends JFrame implements ActionListener{
 
@@ -10,6 +11,10 @@ public class Login extends JFrame implements ActionListener{
 	JTextField txtuser;
 	JPasswordField txtpass;
 	JButton btnlogin,btnreset, newuser;
+	
+	DBConnection dbc = new DBConnection();
+	PreparedStatement pstmt;
+	ResultSet rs;
 	
 	public Login() {
 		lbluser=new JLabel("User Name");
@@ -63,17 +68,38 @@ public class Login extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 	
 		if(e.getSource()==btnlogin) {
+			
 			//JOptionPane.showMessageDialog(null,"You clicked on login button");
 			
-			if((txtuser.getText().equals("Ram"))&& (txtpass.getText().equals("Ram123"))) {
-				JOptionPane.showMessageDialog(null,"Login Success");
-				
-				new MainForm();
-			}
-			else {
-				JOptionPane.showMessageDialog(null,"Login Failed");
-			}
+//			if((txtuser.getText().equals("Ram"))&& (txtpass.getText().equals("Ram123"))) {
+//				JOptionPane.showMessageDialog(null,"Login Success");
+//				
+//				new MainForm();
+//			}
+//			else {
+//				JOptionPane.showMessageDialog(null,"Login Failed");
+//			}
 			
+			try {
+				pstmt=dbc.conn.prepareStatement("select * from studentlogin where username=? and password=?");
+				pstmt.setString(1,txtuser.getText());
+				pstmt.setString(2,txtpass.getText());
+				
+				rs= pstmt.executeQuery();
+				
+				if(rs.next()) {
+					JOptionPane.showMessageDialog(null,"Login Success");
+					new MainForm();
+					this.dispose();
+				}
+				else {
+					JOptionPane.showMessageDialog(null,"Login Failed");
+				}
+			}
+			catch(Exception ex){
+				ex.printStackTrace();
+			}
+				
 		}
 		if(e.getSource()==btnreset) {
 			//JOptionPane.showMessageDialog(null,"You clicked on reset button");

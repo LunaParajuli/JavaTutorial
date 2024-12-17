@@ -8,6 +8,7 @@ public class DBConnection {
 	Connection conn;
 	
 	public DBConnection() {
+		
 		try {
 			
 			//Load the MYSQL Driver
@@ -18,11 +19,13 @@ public class DBConnection {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbdemo","root","Hello_123");
 			System.out.println("Connection Established");
 		}
+		
 		catch(Exception ex) {
 			ex.printStackTrace();
 		}
 	}
-	public static void main(String arga[]) {
+	
+	public static void main(String args[]) {
 		new DBConnection();
 	}
 	

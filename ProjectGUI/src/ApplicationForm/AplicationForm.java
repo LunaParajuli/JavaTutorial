@@ -89,13 +89,13 @@ public class AplicationForm  extends JFrame implements ActionListener{
 	            if (hobby3.isSelected()) {
 	                selectedHobbies.append("Coding ");
 	            }
-			
+	            
 			new NextForm(
 					txtroll.getText(), 
 					txtname.getText(), 
 					cbgender.getSelectedItem().toString(),
 					selectedHobbies.toString().trim()
-			             ); 
+			       ); 
 		}
 	}
 }

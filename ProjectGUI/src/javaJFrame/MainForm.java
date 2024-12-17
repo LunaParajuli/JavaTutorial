@@ -1,8 +1,11 @@
 package javaJFrame;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class MainForm extends JFrame{
+public class MainForm extends JFrame implements ActionListener {
 	
 	JMenuBar mb;
 	JMenu mnuro, mnure,mnuhlp;
@@ -11,7 +14,6 @@ public class MainForm extends JFrame{
 	JMenuItem miabt;
 	
 	public MainForm() {
-		
 		
 		mb=new JMenuBar();
 		
@@ -36,6 +38,8 @@ public class MainForm extends JFrame{
 		mb.add(mnuhlp);
 		
 		mnuro.add(miadd);
+		miadd.addActionListener(this);
+		
 		mnuro.add(miedit);
 		mnuro.add(midel);
 		mnuro.add(miexit);
@@ -49,4 +53,18 @@ public class MainForm extends JFrame{
 		setSize(800,600);
 	}
 	
+	public static void main(String args[]) {
+		setDefaultLookAndFeelDecorated(true);
+		new MainForm();
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==miadd) {
+		new AddRecord();
+		this.dispose();
+	}
+	}
+	
 }
+

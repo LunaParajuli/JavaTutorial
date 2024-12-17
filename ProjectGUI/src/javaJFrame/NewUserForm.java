@@ -45,7 +45,7 @@ public class NewUserForm extends JFrame implements ActionListener{
 		
 		setVisible(true);
 		setSize(400,250);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+//		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("New Form");
 	}
 	
@@ -62,7 +62,9 @@ public class NewUserForm extends JFrame implements ActionListener{
 			try {
 				pstmt = dbc.conn.prepareStatement("insert into studentlogin values(?,?)");
 				pstmt.setString(1,txtuser.getText());
-				pstmt.setString(2,txtpass.getPassword().toString());
+				//pstmt.setString(2,txtpass.getPassword().toString());
+				pstmt.setString(2,txtpass.getText());
+				
 				
 				int result=pstmt.executeUpdate();
 				if(result>0) {
@@ -74,7 +76,6 @@ public class NewUserForm extends JFrame implements ActionListener{
 				else {
 					JOptionPane.showMessageDialog(null,"Unable to create user");
 				}
-				
 			}
 			catch(Exception ex) {	
 				ex.printStackTrace();
