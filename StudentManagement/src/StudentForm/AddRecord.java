@@ -1,4 +1,4 @@
-package javaJFrame;
+package StudentForm;
 
 import javax.swing.*;
 import java.awt.*;
@@ -76,6 +76,11 @@ public class AddRecord extends JFrame implements ActionListener{
 //		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setTitle("Student Record Form");
 	}
+	
+	public static void main(String args[]) {
+		setDefaultLookAndFeelDecorated(true);
+		new AddRecord();
+	}
 	   
        	@Override
        	public void actionPerformed(ActionEvent e) {
@@ -106,8 +111,8 @@ public class AddRecord extends JFrame implements ActionListener{
     				int result=pstmt.executeUpdate();
     				if(result>0) {
     					 JOptionPane.showMessageDialog(null,"New Record Added");
-    					 new StudentDetail(
-    							 txtroll.getText(), 
+    					 new UpdateForm(
+    							 Integer.parseInt(txtroll.getText()), 
     								txtname.getText(), 
     								cbgender.getSelectedItem().toString(),
     								selectedHobbies.toString().trim()
