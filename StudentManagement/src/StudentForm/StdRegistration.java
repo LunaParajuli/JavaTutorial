@@ -61,7 +61,7 @@ public class StdRegistration  extends JFrame implements ActionListener {
 		txtroll.setBounds(100,70,200,25);
 		
 		add(name);
-		name.setBounds(30,100,100,25);
+		name.setBounds(30,110,100,25);
 		add(txtname);
 		txtname.setBounds(100,110,200,25);
 		
@@ -107,6 +107,7 @@ public class StdRegistration  extends JFrame implements ActionListener {
 		model.addColumn("Gender");
 		model.addColumn("Hobby");
 		
+			
 		try {
 			stmt = dbc.conn.createStatement();
 			rs= stmt.executeQuery("select * from studentRecord");
@@ -120,6 +121,7 @@ public class StdRegistration  extends JFrame implements ActionListener {
 		catch(Exception ex) {
 			ex.printStackTrace();
 		}
+		
 		
 		int v = ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED;
 		int h = ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED;
@@ -144,6 +146,23 @@ public class StdRegistration  extends JFrame implements ActionListener {
 		setTitle("Student Record Form");	
 	}
 	
+	
+	private void refreshTableData() {
+	    try {
+	        model.setRowCount(0); // Clear existing rows
+	        rs = stmt.executeQuery("SELECT * FROM studentRecord");
+	        while (rs.next()) {
+	            model.addRow(new Object[]{
+	                rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4)
+	            });
+	        }
+	    } catch (Exception ex) {
+	        ex.printStackTrace();
+	    }
+	}
+	
+	
+	
 	public static void main(String args[]) {
 		new StdRegistration();
 	}
@@ -155,7 +174,6 @@ public class StdRegistration  extends JFrame implements ActionListener {
 		if(e.getSource()==adds) {
 			
 			try {
-				
 				
        			StringBuilder selectedHobbies = new StringBuilder("");
  	            if (hobby1.isSelected()) {
@@ -179,8 +197,9 @@ public class StdRegistration  extends JFrame implements ActionListener {
     				
     				int result=pstmt.executeUpdate();
     				if(result>0) {
-    					 JOptionPane.showMessageDialog(null,"New Record Added");
-    		       		 	 
+    					 JOptionPane.showMessageDialog(null,"New Record Added"); 
+    					 refreshTableData(); // Refresh table
+    					 
     				}
     				else {
     					JOptionPane.showMessageDialog(null,"Unable to add record");
@@ -190,22 +209,80 @@ public class StdRegistration  extends JFrame implements ActionListener {
 			catch(Exception ex) {	
 				ex.printStackTrace();
 			}
-			
 		}
+		
 		
 		if(e.getSource()==update) {
 			
+			try {
+	            int selectedRow = table.getSelectedRow();
+	            if (selectedRow != -1) {
+	                int rollNo = Integer.parseInt(model.getValueAt(selectedRow, 0).toString());
+	                String name = txtname.getText();
+	                String gender = cbgender.getSelectedItem().toString();
+	                
+	                StringBuilder selectedHobbies = new StringBuilder();
+	                if (hobby1.isSelected()) selectedHobbies.append("Reading ");
+	                if (hobby2.isSelected()) selectedHobbies.append("Writing ");
+	                if (hobby3.isSelected()) selectedHobbies.append("Coding ");
+	                
+	                pstmt = dbc.conn.prepareStatement(
+	                    "UPDATE studentRecord SET fullname = ?, gender = ?, hobby = ? WHERE rollno = ?"
+	                );
+	                pstmt.setString(1, name);
+	                pstmt.setString(2, gender);
+	                pstmt.setString(3, selectedHobbies.toString().trim());
+	                pstmt.setInt(4, rollNo);
+	                
+	                int result = pstmt.executeUpdate();
+	                if (result > 0) {
+	                    JOptionPane.showMessageDialog(null, "Record Updated");
+	                    refreshTableData(); // Refresh table
+	                } else {
+	                    JOptionPane.showMessageDialog(null, "Unable to update record");
+	                }
+	            } else {
+	                JOptionPane.showMessageDialog(null, "Please select a row to update");
+	            }
+	        } catch (Exception ex) {
+	            ex.printStackTrace();
+	        }
 		}
+
 		
 		if(e.getSource()==delete) {
 			
+			 try {
+		            int selectedRow = table.getSelectedRow();
+		            if (selectedRow != -1) {
+		                int rollNo = Integer.parseInt(model.getValueAt(selectedRow, 0).toString());
+		                
+		                pstmt = dbc.conn.prepareStatement("DELETE FROM studentRecord WHERE rollno = ?");
+		                pstmt.setInt(1, rollNo);
+		                
+		                int result = pstmt.executeUpdate();
+		                if (result > 0) {
+		                    JOptionPane.showMessageDialog(null, "Record Deleted");
+		                    refreshTableData(); // Refresh table
+		                } else {
+		                    JOptionPane.showMessageDialog(null, "Unable to delete record");
+		                }
+		            } else {
+		                JOptionPane.showMessageDialog(null, "Please select a row to delete");
+		            }
+		        } catch (Exception ex) {
+		            ex.printStackTrace();
+		        }
 		}
 		
 		if(e.getSource()==clear) {
 			
-		}
-		
+			txtroll.setText("");
+			txtname.setText("");
+			cbgender.setSelectedIndex(0); // Reset to default
+	        hobby1.setSelected(false);
+	        hobby2.setSelected(false);
+	        hobby3.setSelected(false);	
+		}	
 	}
-	
-
 }
