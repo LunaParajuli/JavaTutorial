@@ -5,18 +5,18 @@ import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class Login extends JFrame implements ActionListener{
+public class LoginPage extends JFrame implements ActionListener{
 
 	JLabel lbluser,lblpass;
 	JTextField txtuser;
 	JPasswordField txtpass;
 	JButton btnlogin,btnreset, newuser;
 	
-	DBConnection dbc = new DBConnection();
+	ConnectDB dbc = new ConnectDB();
 	PreparedStatement pstmt;
 	ResultSet rs;
 	
-	public Login() {
+	public LoginPage() {
 		lbluser=new JLabel("User Name");
 		lblpass=new JLabel("Password");
 		
@@ -45,7 +45,7 @@ public class Login extends JFrame implements ActionListener{
 		btnlogin.addActionListener(this);
 		
 		add(btnreset);
-		btnreset.setBounds(230,100,100,25);
+		btnreset.setBounds(240,100,100,25);
 		btnreset.addActionListener(this);
 		
 		add(newuser);
@@ -61,7 +61,7 @@ public class Login extends JFrame implements ActionListener{
 	
 	public static void main(String args[]) {
 //		setDefaultLookAndFeelDecorated(true);
-		new Login();
+		new LoginPage();
 	}
 
 	@Override
@@ -69,19 +69,8 @@ public class Login extends JFrame implements ActionListener{
 	
 		if(e.getSource()==btnlogin) {
 			
-			//JOptionPane.showMessageDialog(null,"You clicked on login button");
-			
-//			if((txtuser.getText().equals("Ram"))&& (txtpass.getText().equals("Ram123"))) {
-//				JOptionPane.showMessageDialog(null,"Login Success");
-//				
-//				new MainForm();
-//			}
-//			else {
-//				JOptionPane.showMessageDialog(null,"Login Failed");
-//			}
-			
 			try {
-				pstmt=dbc.conn.prepareStatement("select * from studentlogin where username=? and password=?");
+				pstmt=dbc.conn.prepareStatement("select * from login where username=? and password=?");
 				pstmt.setString(1,txtuser.getText());
 				pstmt.setString(2,txtpass.getText());
 				
@@ -89,7 +78,7 @@ public class Login extends JFrame implements ActionListener{
 				
 				if(rs.next()) {
 					JOptionPane.showMessageDialog(null,"Login Success");
-					new MainForm();
+					
 //					this.dispose();
 				}
 				else {
@@ -102,14 +91,12 @@ public class Login extends JFrame implements ActionListener{
 				
 		}
 		if(e.getSource()==btnreset) {
-			//JOptionPane.showMessageDialog(null,"You clicked on reset button");
-			
 			txtuser.setText("");
 			txtpass.setText("");
 		}
 		
 		if(e.getSource()==newuser) {
-			new NewUserForm();
+			new NewUser();
 			this.dispose();
 		}
 		

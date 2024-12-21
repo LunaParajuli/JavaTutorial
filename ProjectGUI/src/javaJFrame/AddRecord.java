@@ -3,7 +3,7 @@ package javaJFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.PreparedStatement;
+import java.sql.*;
 
 public class AddRecord extends JFrame implements ActionListener{
 	
@@ -106,11 +106,11 @@ public class AddRecord extends JFrame implements ActionListener{
     				int result=pstmt.executeUpdate();
     				if(result>0) {
     					 JOptionPane.showMessageDialog(null,"New Record Added");
-    					 new StudentDetail(
-    							 txtroll.getText(), 
-    								txtname.getText(), 
-    								cbgender.getSelectedItem().toString(),
-    								selectedHobbies.toString().trim()
+    					 new UpdateForm(
+    							 Integer.parseInt(txtroll.getText()), 
+ 								txtname.getText(), 
+ 								cbgender.getSelectedItem().toString(),
+ 								selectedHobbies.toString().trim()
     								
     							 );
     		       		 this.dispose();	 

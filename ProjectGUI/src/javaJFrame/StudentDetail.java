@@ -52,7 +52,7 @@ public class StudentDetail extends JFrame implements ActionListener {
    	public void actionPerformed(ActionEvent e) {
    		if(e.getSource()==update) {
    			JOptionPane.showMessageDialog(null," Click Ok to update the record");
-			 new UpdateForm();
+			// new UpdateForm();
 			 this.dispose();
    	}
 	

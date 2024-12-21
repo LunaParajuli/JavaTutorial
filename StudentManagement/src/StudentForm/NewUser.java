@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
 
-public class NewUserForm extends JFrame implements ActionListener{
+public class NewUser extends JFrame implements ActionListener{
 
 	JLabel lbluser,lblpass;
 	JTextField txtuser;
@@ -12,10 +12,10 @@ public class NewUserForm extends JFrame implements ActionListener{
 	JButton btncreate;
 	
 	PreparedStatement pstmt;
-	DBConnection dbc = new DBConnection();
+	ConnectDB dbc = new ConnectDB();
 	
 	
-	public NewUserForm() {
+	public NewUser() {
 		lbluser=new JLabel("User Name");
 		lblpass=new JLabel("Password");
 		
@@ -50,8 +50,8 @@ public class NewUserForm extends JFrame implements ActionListener{
 	}
 	
 	public static void main(String args[]) {
-		setDefaultLookAndFeelDecorated(true);
-		new NewUserForm();
+//		setDefaultLookAndFeelDecorated(true);
+		new NewUser();
 	}
 
 	@Override
@@ -60,7 +60,7 @@ public class NewUserForm extends JFrame implements ActionListener{
 		if(e.getSource()==btncreate) {
 			
 			try {
-				pstmt = dbc.conn.prepareStatement("insert into studentlogin values(?,?)");
+				pstmt = dbc.conn.prepareStatement("insert into login values(?,?)");
 				pstmt.setString(1,txtuser.getText());
 				//pstmt.setString(2,txtpass.getPassword().toString());
 				pstmt.setString(2,txtpass.getText());
@@ -68,8 +68,8 @@ public class NewUserForm extends JFrame implements ActionListener{
 				int result=pstmt.executeUpdate();
 				if(result>0) {
 					 JOptionPane.showMessageDialog(null,"New User Created. Click Ok to login");
-					 new Login();
-					 this.dispose(); 
+					 new LoginPage();
+					 this.dispose();	 
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Unable to create user");
@@ -77,7 +77,8 @@ public class NewUserForm extends JFrame implements ActionListener{
 			}
 			catch(Exception ex) {	
 				ex.printStackTrace();
-			}	
+			}
+			
 	}
 }
 }
