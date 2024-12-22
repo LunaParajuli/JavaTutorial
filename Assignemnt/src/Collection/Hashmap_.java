@@ -21,7 +21,6 @@ public class Hashmap_ {
 //		emp_name = br.readLine();
 //		
 	}
-
 }
 
 class Employee{
