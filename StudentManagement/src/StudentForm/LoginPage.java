@@ -78,8 +78,8 @@ public class LoginPage extends JFrame implements ActionListener{
 				
 				if(rs.next()) {
 					JOptionPane.showMessageDialog(null,"Login Success");
-					
-//					this.dispose();
+					new StdRegistration();
+					this.dispose();
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Login Failed");
