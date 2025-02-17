@@ -49,8 +49,6 @@
     <fullyQualifiedTypeName name="java.lang.classfile.ClassHierarchyResolver"/>
     <fullyQualifiedTypeName name="int"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.spi.AbstractResourceBundleProvider"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.awt.DisplayMode"/>
     <fullyQualifiedTypeName name="arrays.maxmin"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
+    <fullyQualifiedTypeName name="java.util.spi.AbstractResourceBundleProvider"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
