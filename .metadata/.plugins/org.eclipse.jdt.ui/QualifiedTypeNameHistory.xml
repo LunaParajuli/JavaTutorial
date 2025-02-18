@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.spring.tutorial.SpringConstructorInjection"/>
-    <fullyQualifiedTypeName name="com.example.entity.Account"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
@@ -32,7 +29,6 @@
     <fullyQualifiedTypeName name="java.text.AttributedString"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="oop.Vehicle"/>
-    <fullyQualifiedTypeName name="javax.naming.StringRefAddr"/>
     <fullyQualifiedTypeName name="oop.Vehicles"/>
     <fullyQualifiedTypeName name="oop.Car"/>
     <fullyQualifiedTypeName name="oop.Animal"/>
@@ -53,11 +49,15 @@
     <fullyQualifiedTypeName name="arrays.maxmin"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.runtime.TemplateRuntime"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.code.Attribute.Array"/>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.function.IntBinaryOperator"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="javax.naming.StringRefAddr"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="constructor.Dog"/>
+    <fullyQualifiedTypeName name="java.security.interfaces.DSAKeyPairGenerator"/>
     <fullyQualifiedTypeName name="java.util.spi.AbstractResourceBundleProvider"/>
+    <fullyQualifiedTypeName name="constructor.Book"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
