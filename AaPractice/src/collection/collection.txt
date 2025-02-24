@@ -1,0 +1,14 @@
+
+Collection Framework --> It provides a set of interfaces and classes 
+                         that help in managing groups of object.
+
+
+List interface: part of Java.util package
+                belongs to collection interface
+                provides a way to store an ordered collection of elements.known as a sequence.
+                ArrayList,LinkedList, Vector and Stack
+                
+                
+ArrayList:
+             is a resizable array implementation of the List interface.
+             
