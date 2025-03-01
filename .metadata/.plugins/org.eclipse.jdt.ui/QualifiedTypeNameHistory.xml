@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToOne"/>
     <fullyQualifiedTypeName name="jakarta.persistence.JoinColumn"/>
     <fullyQualifiedTypeName name="com.example.entity.Student"/>
     <fullyQualifiedTypeName name="com.example.entity.Library"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinTask"/>
     <fullyQualifiedTypeName name="collection.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -53,11 +50,14 @@
     <fullyQualifiedTypeName name="java.security.interfaces.DSAKeyPairGenerator"/>
     <fullyQualifiedTypeName name="java.util.spi.AbstractResourceBundleProvider"/>
     <fullyQualifiedTypeName name="constructor.Book"/>
-    <fullyQualifiedTypeName name="java.lang.classfile.Superclass"/>
     <fullyQualifiedTypeName name="constructor.Base"/>
     <fullyQualifiedTypeName name="constructor.Point"/>
     <fullyQualifiedTypeName name="constructor.GetSet"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="collection.ArrayList1"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="arrays.arraySum"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.Superclass"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinTask"/>
 </qualifiedTypeNameHistroy>
